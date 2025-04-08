@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Songs for You 💖</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="song-menu">
+          <li
+            class="song-tab"
+            data-song="Files/Songs/maand (mp3cut.net).m4a"
+            data-cover="Files/Images/image1.jpg"
+          >
+            Maand
+          </li>
+          <li
+            class="song-tab"
+            data-song="Files/Songs/paro (mp3cut.net).m4a"
+            data-cover="Files/Images/image2.png"
+          >
+            Paro
+          </li>
+          <li
+            class="song-tab"
+            data-song="Files/Songs/rakh lo chupake (mp3cut.net).m4a"
+            data-cover="Files/Images/image3.jpg"
+          >
+            Rakh Lo Chupake
+          </li>
+          <li
+            class="song-tab"
+            data-song="Files/Songs/tum se hi song (mp3cut.net).m4a"
+            data-cover="Files/Images/image4.jpg"
+          >
+            Tum Se Hi
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="player-container">
+      <!-- Moving Text Banner -->
+      <div class="marquee">
+        <p>I love you 💖 I love you 💖 I love you 💖 I love you 💖</p>
+      </div>
+
+      <!-- Cover Image -->
+      <div class="cover-container">
+        <img id="song-cover" src="Files\Images\image3.jpg" alt="Song Cover" />
+      </div>
+
+      <!-- Custom Audio Player -->
+      <div class="audio-player">
+        <audio id="audio-player" controls>
+          <source
+            id="audio-source"
+            src="Files/Songs/mixkit-footsteps-on-tall-grass-532.wav"
+            type="audio/wav"
+          />
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+          <button id="play-button">▶ Play</button>
+          <button id="pause-button">⏸ Pause</button>
+          <button id="replay-button">🔄 Replay</button>
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="showPopup()">💌 Request Love Letter</button>
+
+    <div id="overlay"></div>
+
+    <div id="love-popup">
+      <p id="love-letter-text"></p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
